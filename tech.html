@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tech Industry Reports - Stock Analysis</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    /* Main content styling */
+    .main-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    h1 {
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+    }
+
+    h2 {
+      color: #2980b9;
+      margin-top: 30px;
+    }
+
+    .step {
+      background-color: #f8f9fa;
+      border-left: 4px solid #3498db;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .step-title {
+      font-size: 2.05rem;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    ul.feature-list {
+      padding-left: 20px;
+    }
+
+    ul.feature-list li {
+      margin-bottom: 10px;
+    }
+
+    .conclusion {
+      background-color: #e8f4fc;
+      padding: 20px;
+      border-radius: 4px;
+      margin-top: 30px;
+    }
+
+    .tech-sector {
+      background-color: #f0f8ff;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    .sector-performance {
+      font-weight: bold;
+      color: #2e8b57;
+    }
+/* Sticky sidebar adjustments */
+    @media (min-width: 992px) {
+      .sticky-top {
+        top: 80px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <span><i class="bi bi-envelope me-2"></i>info@spearheadresearch.com</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="index.html" class="me-3"></i>Home</a>
+                    <a href="#about" class="me-3"> About Us</a>
+                    <a href="#contact" class="me-3">Contact Us</a>
+                    <a href="login.html" class="me-3">Login</a>
+                    <a href="register.html">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./images/logo-3.png" height="103px">
+                <!--   <i class="bi bi-graph-up me-2">--></i>Spearhead Researchers
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Finance 101 Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="financeDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Finance 101
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="financeDropdown">
+                            <li><a class="dropdown-item" href="how to invest.html">How to Invest</a></li>
+                            <li><a class="dropdown-item" href="stocks.html">Stocks</a></li>
+                            <li><a class="dropdown-item" href="bonds.html">Bonds</a></li>
+                            <li><a class="dropdown-item" href="funds.html">Funds</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Industry Reports Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="industryDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Industry Reports
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="industryDropdown">
+                            <li><a class="dropdown-item" href="#">Tech</a></li>
+                            <li><a class="dropdown-item" href="#">Finance / banking</a></li>
+                            <li><a class="dropdown-item" href="#">Real Estate</a></li>
+                            <li><a class="dropdown-item" href="#">Energy</a></li>
+                            <li><a class="dropdown-item" href="">Material</a></li>
+                            <li><a class="dropdown-item" href="#">Industrials</a></li>
+                            <li><a class="dropdown-item" href="#">Utilities</a></li>
+                            <li><a class="dropdown-item" href="#">HealthCare</a></li>
+                            <li><a class="dropdown-item" href="#">Consumer Discretionary</a></li>
+                            <li><a class="dropdown-item" href="#">Consumer Staples</a></li>
+                            <li><a class="dropdown-item" href="#">Communication Services</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Stock Research Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="stockDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Stock Research
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="stockDropdown">
+                            <li><a class="dropdown-item" href="#">Spearhead's Latest Research</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Wealth Planning Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="wealthDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Wealth Planning
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="wealthDropdown">
+                            <li><a class="dropdown-item" href="#">Personal / Finance Budgeting</a></li>
+                            <li><a class="dropdown-item" href="#">Employer Accounts</a></li>
+                            <li><a class="dropdown-item" href="#">Retirement Planning</a></li>
+                            <li><a class="dropdown-item" href="#">Family Planning</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Markets Dropdown -->
+                    <li class="nav-item"><a class="nav-link" href="market.html">Markets</a></li>
+
+                </ul>
+
+                <form class="d-flex ms-3">
+                    <input class="form-control me-2" type="search" placeholder="Search stocks..." aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-content">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1 class="display-4 fw-bold mb-4" style="color: #e8f4fc;">Technology Sector Analysis & Stock Reports</h1>
+          <p class="lead mb-4">Comprehensive research on the technology industry including semiconductors, software,
+            cloud computing, AI, and emerging tech trends that are shaping the market.</p>
+        </div>
+        <div class="col-lg-6 d-none d-lg-block">
+          <!-- Placeholder for hero image or chart -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container my-5">
+    <div class="row">
+      <!-- Main Section -->
+      <div class="col-lg-8 main-content">
+        <h1>Technology Industry Overview</h1>
+
+        <div class="tech-sector">
+          <p class="sector-performance">Sector Performance: +18.7% YTD (Outperforming S&P 500 by 9.2%)</p>
+          <p>The technology sector continues to drive market growth, with AI, cloud computing, and semiconductor
+            innovation leading the charge.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-title">Key Tech Subsectors</div>
+          <p>The technology industry comprises several critical subsectors, each with unique characteristics and investment
+            opportunities:</p>
+          <ul class="feature-list">
+            <li><strong>Semiconductors:</strong> The backbone of all modern technology with companies like NVIDIA, TSMC,
+              and
+              ASML</li>
+            <li><strong>Software:</strong> Enterprise and consumer software leaders including Microsoft, Adobe, and
+              Salesforce</li>
+            <li><strong>Cloud Computing:</strong> Dominated by AWS (Amazon), Azure (Microsoft), and Google Cloud</li>
+            <li><strong>Artificial Intelligence:</strong> Rapidly growing sector with both established players and
+              startups</li>
+            <li><strong>Internet Services:</strong> Companies like Alphabet, Meta, and emerging web3 platforms</li>
+            <li><strong>Hardware:</strong> Device manufacturers including Apple, Dell, and HP</li>
+          </ul>
+        </div>
+
+        <div class="step">
+          <div class="step-title">Investment Strategies</div>
+          <p>Investors looking to capitalize on the technology sector should consider diversified approaches:</p>
+          <ul class="feature-list">
+            <li>Focus on industry leaders with strong balance sheets and innovative product pipelines.</li>
+            <li>Identify emerging technologies early, such as AI and quantum computing.</li>
+            <li>Consider ETFs for broad exposure to technology stocks.</li>
+            <li>Keep an eye on valuation metrics and market cycles.</li>
+          </ul>
+        </div>
+
+        <div class="conclusion">
+          <h2>Conclusion</h2>
+          <p>The technology sector offers significant growth potential but comes with volatility. Staying informed on
+            industry trends and company fundamentals is crucial for success in this dynamic space.</p>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="col-lg-4">
+        <div class="sticky-top">
+          <h4 class="mb-3">Latest Tech Stock Picks</h4>
+          <ul class="list-group mb-4">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              NVIDIA <span class="badge bg-success">Buy</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Microsoft <span class="badge bg-success">Buy</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              TSMC <span class="badge bg-warning text-dark">Hold</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Meta Platforms <span class="badge bg-danger">Sell</span>
+            </li>
+          </ul>
+
+          <h5>Upcoming Events</h5>
+          <ul class="list-unstyled">
+            <li><strong>Q2 Earnings:</strong> July 15, 2025</li>
+            <li><strong>Tech Conference:</strong> August 23-25, 2025</li>
+            <li><strong>Product Launches:</strong> September 10, 2025</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="text-white mb-4"><i class="bi bi-graph-up me-2"></i>Spearhead Research</h3>
+                    <p>Providing institutional-quality market research and analytics to investors of all sizes since
+                        2015.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <div class="footer-links">
+                        <h5>Company</h5>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <div class="footer-links">
+                        <h5>Research</h5>
+                        <ul>
+                            <li><a href="#">Market Reports</a></li>
+                            <li><a href="#">Sector Analysis</a></li>
+                            <li><a href="#">Stock Ratings</a></li>
+                            <li><a href="#">Economic Outlook</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <div class="footer-links">
+                        <h5>Resources</h5>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Glossary</a></li>
+                            <li><a href="#">Tutorials</a></li>
+                            <li><a href="#">API</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-links">
+                        <h5>Legal</h5>
+                        <ul>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Disclosures</a></li>
+                            <li><a href="#">Compliance</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright text-center">
+                <p class="mb-0">&copy; 2025 Spearhead Research. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
